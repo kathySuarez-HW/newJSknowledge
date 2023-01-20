@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <table border="1">
+      <tr>
+        <th>Name</th>
+        <th>lastName</th>
+        <th>age</th>
+      </tr>
+      <tbody id="secondTr"></tbody>
+    </table>
+    <script>
+      let peopleList = document.getElementById("secondTr");
+
+      let people = [
+        {
+          name: "Sofia",
+          lastName: "Jimenez",
+          age: 15,
+        },
+        {
+          name: "Martha",
+          lastName: "Perez",
+          age: 18,
+        },
+        {
+          name: "Teresa",
+          lastName: "Smith",
+          age: 20,
+        },
+      ];
+      let one;
+      for (let i = 0; i <= people.length; i = i + 1) {
+        one += "<tr>";
+        one += "<td>" + people[i].name + "</td>";
+        one += "<td>" + people[i].lastName + "</td>";
+        one += "<td>" + people[i].age + "</td>";
+        one += "<tr>";
+      }
+      peopleList.innerHTML = one;
+      /*
+      let colors = ["red", "orange", "blue", "pink", "purple"];
+      console.log(colors[0]);
+      for (let i = 0; i < colors.length; i = i + 1) {
+        console.log(colors[i]);
+      }
+      */
+    </script>
+  </body>
+</html>
