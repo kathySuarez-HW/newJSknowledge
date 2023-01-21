@@ -8,11 +8,13 @@
   </head>
   <body>
     <table border="1">
-      <tr>
-        <th>Name</th>
-        <th>lastName</th>
-        <th>age</th>
-      </tr>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>lastName</th>
+          <th>age</th>
+        </tr>
+      </thead>
       <tbody id="secondTr"></tbody>
     </table>
     <script>
@@ -35,8 +37,8 @@
           age: 20,
         },
       ];
-      let one;
-      for (let i = 0; i <= people.length; i = i + 1) {
+      let one = "";
+      for (let i = 0; i < people.length; i = i + 1) {
         one += "<tr>";
         one += "<td>" + people[i].name + "</td>";
         one += "<td>" + people[i].lastName + "</td>";
@@ -51,6 +53,12 @@
         console.log(colors[i]);
       }
       */
+      /*crud
+     create
+     read
+     update
+     delete
+*/
     </script>
   </body>
 </html>
