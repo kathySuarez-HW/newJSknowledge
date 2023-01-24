@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <table border="1">
+      <thead>
+        <tr>
+          <th>name</th>
+          <th>lastName</th>
+          <th>age</th>
+        </tr>
+      </thead>
+      <tbody id="secondTr"></tbody>
+    </table>
+    <script>
+      let playerList = document.getElementById("secondTr");
+      let playes = [
+        { name: "Cristiano", lastName: "Ronaldo", age: 37 },
+        {
+          name: "Memo",
+          lastName: "Ochoa",
+          age: 37,
+        },
+        {
+          name: "Pepe",
+          lastName: "Lima",
+          age: 39,
+        },
+      ];
+      let one = "";
+      for (let i = 0; i < playerList.length; i = i + 1) {
+        one += "<tr>";
+        one += "<td>" + playerList[i].name + "</td>";
+        one += "<td>" + playerList[i].lastName + "</td>";
+        one += "<td>" + playerList[i].age + "</td>";
+        one += "<tr>";
+      }
+      playerList.innerHTML = one;
+    </script>
+  </body>
+</html>

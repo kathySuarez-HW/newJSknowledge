@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <table border="1">
+      <thead>
+        <tr>
+          <th>fruits</th>
+          <th>vegetables</th>
+          <th>seeds</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>strawberries</td>
+          <td>cucumber</td>
+          <td>almonds</td>
+        </tr>
+        <tr>
+          <td>grapes</td>
+          <td>nopales</td>
+          <th>chia</th>
+        </tr>
+        <tr>
+          <td>mango</td>
+          <td>spinach</td>
+          <td>nuts</td>
+        </tr>
+      </tbody>
+    </table>
+    <hr />
+    <table border="1">
+      <thead>
+        <th>birds</th>
+        <th>dogs</th>
+        <th>fishes</th>
+      </thead>
+      <tbody id="content"></tbody>
+    </table>
+    <script>
+      const animals = [
+        { birds: "parrots", dogs: "germansherperd", fishes: "shark" },
+        { birds: "guacamaya", dogs: "chihuahua", fishes: "whale" },
+        { birds: "colibri", dogs: "alaska", fishes: "beta" },
+      ];
+      console.log(animals[2].fishes);
+
+      /* for (let i = 0; i < animals.length; i = i + 1) {
+        console.log(animals[i].birds);
+        console.log(animals[i].dogs);
+        console.log(animals[i].fishes);
+      }*/
+      let data = "";
+      for (let i = 0; i < animals.length; i = i + 1) {
+        data = data + "<tr>";
+        data = data + "<td>" + animals[i].birds + "</td>";
+        data = data + "<td>" + animals[i].dogs + "</td>";
+        data = data + "<td>" + animals[i].fishes + "</td>";
+        data = data + "</tr>";
+      }
+      document.getElementById("content").innerHTML = data;
+    </script>
+  </body>
+</html>
